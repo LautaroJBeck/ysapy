@@ -9,8 +9,9 @@ const ArticuloBienvenida = () => {
             </div>
             <ul className="link-container">
                 <li><a href="#">Inicio</a></li>
+                <li><a href="#">Nuestros productos</a></li>
                 <li><a href="#">Menú</a></li>
-                <li><a href="#">Galería</a></li>
+                <li><a href="#">Sobre nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </header>

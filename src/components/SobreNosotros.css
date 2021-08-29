@@ -1,0 +1,41 @@
+.about_us-container{
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+.about_us-img-container{
+    height:85%;
+    width:85%;
+}
+.about_us-img-container img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    object-position: left;
+}
+.about_us-info-container{
+    background-color: #fff;
+    width:50%;
+    height:60%;
+    padding:2rem;
+}
+.about_us-acerca{
+    font-family: "Oswald",sans-serif;
+    text-transform: uppercase;
+    font-size: 3.25rem;
+    color:#212121;
+}
+.about_us-nosotros{
+    font-family: "Dancing Script", cursive;
+    font-weight: lighter;
+    font-size: 3.25rem;
+    color:rgb(207, 166, 112);
+    margin-bottom: 1rem;
+}
+.about_us-parrafo{
+    font-family: "Rubik",sans-serif;
+    font-weight: lighter;
+    color:#212121;
+    line-height: 1.25rem;
+}
