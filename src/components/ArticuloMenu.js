@@ -1,229 +1,98 @@
 import "./ArticuloMenu.css"
 import imgPalmito from "../media/pizzas/Palmito.jpg"
+import imgHelado from "../media/helados/helado.jpg"
+import imgEmpanada from "../media/rotiseria/empanada.jpg"
+import TemplateMenu from "./TemplateMenu"
+import {useState} from "react"
+
+
 const ArticuloMenu = () => {
+    let pizzasTemplate=[
+        {
+            title:"Clásica",
+            paragraph:"Salsa de tomate natural, mozzarella y salpicado de orégano",
+            img:imgPalmito
+        },
+        {
+            title:"Romana",
+            paragraph:"Salsa de carne, mozzarella, orégano",
+            img:imgPalmito
+        },
+        {
+            title:"Mozzarella",
+            paragraph:"Salsa de tomate natural, queso mozzarella, rodajas de tomate y orégano",
+            img:imgPalmito
+        }
+    ]
+    let heladosTemplate=[
+        {
+            title:"Sabor chocolate",
+            paragraph:"Hecho con escencias de chocolate",
+            img:imgHelado
+        },
+        {
+            title:"Milk Shake",
+            paragraph:"Un postre hecho con sabores de helado a preferencia y leche",
+            img:imgHelado
+        },
+        {
+            title:"Ice Cream Cola",
+            paragraph:"Una mezcla entre deliciosos sabores de helado y Coca Cola",
+            img:imgHelado
+        }
+    ]
+    let empanadasTemplate=[
+        {
+            title:"Empanada de carne",
+            paragraph:"Salsa de tomate natural, mozzarella y salpicado de orégano",
+            img:imgEmpanada
+        },
+        {
+            title:"Empanada de choclo",
+            paragraph:"Salsa de carne, mozzarella, orégano",
+            img:imgEmpanada
+        },
+        {
+            title:"Empanada de jamón y queso",
+            paragraph:"Salsa de tomate natural, queso mozzarella, rodajas de tomate y orégano",
+            img:imgEmpanada
+        }
+    ]
+    const [valorContenido, setValorContenido] = useState("pizza")    
+    const handleButtonChange=(e)=>{
+        setValorContenido(e.target.name);
+    }
     return (
-        <div className="menu-container">
-            <h2>MENÚ</h2>
-            <div className="menu-flex-container">
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="Clasica" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Clásica</span>
-                        <p>Salsa de tomate natural, mozarella y salpicado de orégano</p>
-                    </div>
-                </div>  
+        <>
+        <div id="nuestrosProductos" className="menu-container">
+            <h2>Algunos de nuestros productos</h2>
+            <div className="menu-button_change-container">
+                <button name="pizza" onClick={(e)=>handleButtonChange(e)} className={"button_change-item " + (valorContenido==="pizza"?"button_change-item-active":"")}>Pizzas</button>
+                <button name="helado" onClick={(e)=>handleButtonChange(e)} className={"button_change-item " + (valorContenido==="helado"?"button_change-item-active":"")}>Helados</button>
+                <button name="empanada" onClick={(e)=>handleButtonChange(e)} className={"button_change-item " + (valorContenido==="empanada"?"button_change-item-active":"")}>Rotisería</button>
 
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="romana" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Romana</span>
-                        <p>Salsa de carne, mozzarella y orégano</p>
-                    </div>
-                </div>   
-
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="Mozzarella" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Mozzarella</span>
-                        <p>Salsa de tomate natural, queso mozzarella, rodajas de tomate y orégano</p>
-                    </div>
-                </div>
-
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="choclo" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Choclo</span>
-                        <p>Salsa de tomate natural, queso mozzarella, rodajas de tomate y orégano</p>
-                    </div>
-                </div>
-
-                
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="napolitana" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Napolitana</span>
-                        <p>Salsa de tomate natural, queso mozzarella, jamón y orégano</p>
-                    </div>
-                </div>
-
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="vegetariana" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Vegetariana</span>
-                        <p>Salsa de tomate natural, queso mozzarella, rodajas de tomate, pimientos en cubitos, aceitunas negras y orégano</p>
-                    </div>
-                </div>
-
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="pollo" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Pollo</span>
-                        <p>Salsa de tomate natural, queso mozarella, rodajas de tomate, pimiento en cubitos, aceitunas negras y orégano</p>
-                    </div>
-                </div>
-                
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="palmito" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Palmito y Salsa Golf</span>
-                        <p>Salsa de tomate natural, queso mozzarella, pechuga de pollo en trocitos, salsa y orégano</p>
-                    </div>
-                </div>
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="aceituna" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Aceituna</span>
-                        <p>Salsa de tomate natural, queso mozzarella, aceitunas verdes y orégano</p>
-                    </div>
-                </div>
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="calabresa" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Calabresa</span>
-                        <p>Salsa de tomate natural, queso mozzarella, rodajas de calabresa y orégano</p>
-                    </div>
-                </div>
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="atun" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Atún</span>
-                        <p>Salsa de tomate natural, queso mozzarella, atún desmenuzado y orégano</p>
-                    </div>
-                </div>
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="ysapy" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Ysapy</span>
-                        <p>Salsa de tomate natural, queso mozzarella, calabresa en rodajas, morrones en tiras, aceitunas negras y orégano</p>
-                    </div>
-                </div>
-
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="vienesa" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Vienesa</span>
-                        <p>Salsa de tomate natural, queso mozzarella, Salchicas en rodajas, aceitunas verdes, morrones en rodajas, agregado de mayonesa y orégano</p>
-                    </div>
-                </div> 
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="carbonara" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Carbonara</span>
-                        <p>Salsa de tomate natural, queso mozzarella, preparado de crema de leche, yemas de huevo, mantequilla y panceta, espolvoreado con queso rayado</p>
-                    </div>
-                </div> 
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="caprichosa" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Caprichosa</span>
-                        <p>Salsa de tomate, queso mozzarella, jamón, champignon y huevo</p>
-                    </div>
-                </div> 
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="mexicana"/>
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Mexicana</span>
-                        <p>Salsa de tomate, queso mozzarella, pepperoni, pimientos y ají picante</p>
-                    </div>
-                </div> 
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="bolognesa" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Bolognesa</span>
-                        <p>Salsa de tomate, queso mozzarella, pepperoni, pimientos y ají picante</p>
-                    </div>
-                </div> 
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="katupiri" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Katupiri</span>
-                        <p>Salsa de tomate, queso katupiri, espolvoreado con queso parmesano</p>
-                    </div>
-                </div> 
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="katupiri_con_pollo" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Katupiri con pollo</span>
-                        <p>Salsa de tomate, delicioso pollo grille desmenuzado, queso katupiri y aceitunas verdes</p>
-                    </div>
-                </div> 
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="4queso" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">4 queso</span>
-                        <p>Salsa de tomate, queso mozzarella, queso Dambo, queso katupiri, roquefort, espolvoreado con queso parmesano</p>
-                    </div>
-                </div> 
-
-                <div className="menu-item-container">        
-                    <div className="item-img-container">
-                        <img src={imgPalmito} alt="americana" />
-                    </div>
-                    <div className="item-info-container">
-                        <span className="item-info_title">Americana</span>
-                        <p>Salsa de tomate, agregado de queso mozzarella, deliciosas pancetas crocantes y morrones en tiras</p>
-                    </div>
-                </div> 
             </div>
-                
+            <div className="menu-flex-container">
+                {valorContenido==="pizza"?pizzasTemplate.map(el=>(
+                        <TemplateMenu valor={el}/>
+                )):<></>}
+                {valorContenido==="empanada"?empanadasTemplate.map(el=>(
+                        <TemplateMenu valor={el}/>
+                )):<></>}
+                {valorContenido==="helado"?heladosTemplate.map(el=>(
+                        <TemplateMenu valor={el}/>
+                )):<></>}
+
+
+
+             
         </div>
+        <div className="menu-button-container">
+            <button><a href="">Ver el menú completo</a></button>
+        </div>
+        </div>
+   
+        </>
     )
 }
 
