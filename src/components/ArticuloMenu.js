@@ -4,7 +4,7 @@ import imgHelado from "../media/helados/helado.jpg"
 import imgEmpanada from "../media/rotiseria/empanada.jpg"
 import TemplateMenu from "./TemplateMenu"
 import {useState} from "react"
-
+import {Link} from "react-router-dom"
 
 const ArticuloMenu = () => {
     let pizzasTemplate=[
@@ -64,7 +64,7 @@ const ArticuloMenu = () => {
     }
     return (
         <>
-        <div id="nuestrosProductos" className="menu-container">
+        <div id="/#nuestrosProductos" className="menu-container">
             <h2>Algunos de nuestros productos</h2>
             <div className="menu-button_change-container">
                 <button name="pizza" onClick={(e)=>handleButtonChange(e)} className={"button_change-item " + (valorContenido==="pizza"?"button_change-item-active":"")}>Pizzas</button>
@@ -74,13 +74,13 @@ const ArticuloMenu = () => {
             </div>
             <div className="menu-flex-container">
                 {valorContenido==="pizza"?pizzasTemplate.map(el=>(
-                        <TemplateMenu valor={el}/>
+                        <TemplateMenu key={el.title} valor={el}/>
                 )):<></>}
                 {valorContenido==="empanada"?empanadasTemplate.map(el=>(
-                        <TemplateMenu valor={el}/>
+                        <TemplateMenu key={el.title} valor={el}/>
                 )):<></>}
                 {valorContenido==="helado"?heladosTemplate.map(el=>(
-                        <TemplateMenu valor={el}/>
+                        <TemplateMenu key={el.title} valor={el}/>
                 )):<></>}
 
 
@@ -88,7 +88,7 @@ const ArticuloMenu = () => {
              
         </div>
         <div className="menu-button-container">
-            <button><a href="">Ver el menú completo</a></button>
+            <button><Link to="/menu">Ver el menú completo</Link></button>
         </div>
         </div>
    

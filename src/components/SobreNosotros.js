@@ -2,7 +2,7 @@ import "./SobreNosotros.css"
 import funcionarios from "../media/funcionarios.jpg"
 const SobreNosotros = () => {
     return (
-        <div id="sobreNosotros" className="about_us-container">
+        <div id="/#sobreNosotros" className="about_us-container">
             <div className="about_us-img-container">
                 <img src={funcionarios} alt="" />
             </div>

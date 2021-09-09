@@ -1,0 +1,67 @@
+.section-menu-container{
+    margin-top: 4rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:auto;
+}
+.section-menu-container h4{
+    margin-top: 2.5em;
+    font-size: 2.5rem;
+    font-family: "Rubik",sans-serif;
+}
+.section-pizza-container{
+    display:flex;
+    width:90%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.un-pedazo{
+    border:1px solid black;
+    padding:1em;
+    flex-grow: 1;
+    max-width: 450px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+.un-pedazo h5{
+    font-size: 1.5em;
+    font-family: "Oswald",sans-serif;
+    font-weight:bold;
+    color:#212121
+}
+.un-pedazo p{
+    margin-top: .5rem;
+    font-size: .75em;
+    color:#979797;
+    font-weight: lighter;
+    font-family: "Roboto",sans-serif;
+}
+.un-pedazo section{
+    display:flex;
+    margin-top: .5rem;
+    width:70%;  
+    justify-content: space-between;
+}
+.section-pizza_title{
+    color:#979797;
+    font-size: 1em;
+    font-family: "Rubik",sans-serif;
+    background-color: #f7f7f7;
+    width:5rem;
+    border-radius: .75rem;
+    text-align: center;
+}
+.section-pizza_price{
+    color:#f7f7f7;
+    background-color: #ba0000;
+    font-size: 1em;
+    font-family: "Rubik",sans-serif;
+    width:5rem;
+    border-radius: .75rem;
+    text-align: center;
+}
