@@ -70,7 +70,6 @@ const ArticuloMenu = () => {
                 <button name="pizza" onClick={(e)=>handleButtonChange(e)} className={"button_change-item " + (valorContenido==="pizza"?"button_change-item-active":"")}>Pizzas</button>
                 <button name="helado" onClick={(e)=>handleButtonChange(e)} className={"button_change-item " + (valorContenido==="helado"?"button_change-item-active":"")}>Helados</button>
                 <button name="empanada" onClick={(e)=>handleButtonChange(e)} className={"button_change-item " + (valorContenido==="empanada"?"button_change-item-active":"")}>Rotisería</button>
-
             </div>
             <div className="menu-flex-container">
                 {valorContenido==="pizza"?pizzasTemplate.map(el=>(

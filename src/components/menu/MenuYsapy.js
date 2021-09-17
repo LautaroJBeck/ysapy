@@ -1,97 +1,39 @@
 import { useState } from "react";
 import "./MenuYsapy.css"
-import Header from "../Header";
 import LoaderBienvenida from "../loaders/LoaderBienvenida";
-const MenuYsapy = () => {
-    let [loader,setLoader]=useState(true)
-    const funcionEvento=()=>{
-        setLoader(false);
+import PizzaMenu from "./sections/pizzas/PizzaMenu";
+import HeladoMenu from "./sections/helados/HeladoMenu";
+import RotiseriaMenu from "./sections/rotiserias/RotiseriaMenu";
+import HeaderMenu from "./HeaderMenu";
 
+const MenuYsapy = () => {
+    const funcionEvento=()=> setLoader(false);
+
+
+    const [valorContenido, setvalorContenido] = useState("pizza")
+    let [loader,setLoader]=useState(true)
+    const handleButtonChange=(e)=>{
+        setvalorContenido(e.target.name)
     }
     return (
         <>
-        <Header/>
+        <HeaderMenu handleSection={handleButtonChange}/>
         <LoaderBienvenida loader={loader}/>
-        <div onLoad={()=>funcionEvento()} className="section-menu-container">
-            <h4>Pizzas</h4>
-            <article className="section-pizza-container">
-                <div className="un-pedazo">
-                    <h5>
-                        PIZZA CLÁSICA
-                    </h5>
-                    <p>Salsa de tomate natural, mozzarella y salpicado de orégano</p>    
-                    <section>
-                        <span className="section-pizza_title">Personal</span>
-                        <span className="section-pizza_price">12.000 GS</span>
-                    </section>
-                    <section>
-                        <span className="section-pizza_title">Familiar</span>
-                        <span className="section-pizza_price">35.000 GS </span>
-                    </section>
-                    <section>
-                        <span className="section-pizza_title">Tuicha</span>
-                        <span className="section-pizza_price">40.000 GS</span>
-                    </section>
-                </div>
+        <article className="menu-general-container">
 
-                <div className="un-pedazo">
-                    <h5>
-                        PIZZA CLÁSICA
-                    </h5>
-                    <p>Salsa de tomate natural, mozzarella y salpicado de orégano</p>    
-                    <section>
-                        <span className="section-pizza_title">Personal</span>
-                        <span className="section-pizza_price">12.000 GS</span>
-                    </section>
-                    <section>
-                        <span className="section-pizza_title">Familiar</span>
-                        <span className="section-pizza_price">35.000 GS </span>
-                    </section>
-                    <section>
-                        <span className="section-pizza_title">Tuicha</span>
-                        <span className="section-pizza_price">40.000 GS</span>
-                    </section>
-                </div>
-
-                <div className="un-pedazo">
-                    <h5>
-                    PIZZA CLÁSICA
-                    </h5>
-                    <p>Salsa de tomate natural, mozzarella y salpicado de orégano</p>       
-                    <section>
-                        <span className="section-pizza_title">Personal</span>
-                        <span className="section-pizza_price">12.000 GS</span>
-                    </section>
-                    <section>
-                        <span className="section-pizza_title">Familiar</span>
-                        <span className="section-pizza_price">35.000 GS </span>
-                    </section>
-                    <section>
-                        <span className="section-pizza_title">Tuicha</span>
-                        <span className="section-pizza_price">40.000 GS</span>
-                    </section>
-                </div>
-
-                <div className="un-pedazo">
-                    <h5>
-                    PIZZA CLÁSICA
-                    </h5>
-                    <p>Salsa de tomate natural, mozzarella y salpicado de orégano</p>    
-                    <section>
-                        <span className="section-pizza_title">Personal</span>
-                        <span className="section-pizza_price">12.000 GS</span>
-                    </section>
-                    <section>
-                        <span className="section-pizza_title">Familiar</span>
-                        <span className="section-pizza_price">35.000 GS </span>
-                    </section>
-                    <section>
-                        <span className="section-pizza_title">Tuicha</span>
-                        <span className="section-pizza_price">40.000 GS</span>
-                    </section>
-                </div>
-            </article>   
+        <div className="menu_button-container">
+            <button name="pizza" onClick={(e)=>handleButtonChange(e)} className={"menu-button_change button-pizza " + (valorContenido==="pizza"?"button-pizza_active":"")}>Pizzas</button>
+            <button name="helados" onClick={(e)=>handleButtonChange(e)} className={"menu-button_change button-helado " + (valorContenido==="helados"?"button-helados_active":"")}>Helados</button>
+            <button name="rotiseria" onClick={(e)=>handleButtonChange(e)} className={"menu-button_change button-rotiseria " + (valorContenido==="rotiseria"?"button-rotiseria_active":"")}>Rotiserías</button>
         </div>
+        <div onLoad={()=>funcionEvento()} className="section-menu-container">
+            
+                {valorContenido==="pizza"?<PizzaMenu/>:<></>}
+                {valorContenido==="helados"?<HeladoMenu/>:<></>}
+                {valorContenido==="rotiseria"?<RotiseriaMenu/>:<></>}
+
+        </div>
+        </article>
         </>
     )
 }
