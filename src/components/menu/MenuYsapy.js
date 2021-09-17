@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import "./MenuYsapy.css"
 import LoaderBienvenida from "../loaders/LoaderBienvenida";
 import PizzaMenu from "./sections/pizzas/PizzaMenu";
@@ -7,11 +7,17 @@ import RotiseriaMenu from "./sections/rotiserias/RotiseriaMenu";
 import HeaderMenu from "./HeaderMenu";
 
 const MenuYsapy = () => {
-    const funcionEvento=()=> setLoader(false);
 
+    let [loader,setLoader]=useState(true)
+
+    useEffect(() => {
+        setTimeout(() => {
+            setLoader(false)
+        }, 1250);
+    }, [])
 
     const [valorContenido, setvalorContenido] = useState("pizza")
-    let [loader,setLoader]=useState(true)
+
     const handleButtonChange=(e)=>{
         setvalorContenido(e.target.name)
     }
@@ -26,7 +32,7 @@ const MenuYsapy = () => {
             <button name="helados" onClick={(e)=>handleButtonChange(e)} className={"menu-button_change button-helado " + (valorContenido==="helados"?"button-helados_active":"")}>Helados</button>
             <button name="rotiseria" onClick={(e)=>handleButtonChange(e)} className={"menu-button_change button-rotiseria " + (valorContenido==="rotiseria"?"button-rotiseria_active":"")}>Rotiserías</button>
         </div>
-        <div onLoad={()=>funcionEvento()} className="section-menu-container">
+        <div className="section-menu-container">
             
                 {valorContenido==="pizza"?<PizzaMenu/>:<></>}
                 {valorContenido==="helados"?<HeladoMenu/>:<></>}

@@ -24,7 +24,6 @@ function App() {
             </Route>
 
             <Route exact path="/menu">
-
               <MenuYsapy/>
 
             </Route>

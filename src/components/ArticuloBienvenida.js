@@ -1,16 +1,18 @@
 import "./ArticuloBienvenida.css"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import LoaderBienvenida from "./loaders/LoaderBienvenida"
 const ArticuloBienvenida = () => {
     let [loader,setLoader]=useState(true)
-    const funcionEvento=()=>{
-        setLoader(false);
 
-    }
+    useEffect(() => {
+        setTimeout(() => {
+            setLoader(false)
+        }, 1250);
+    }, [])
     return (
         <>
         <LoaderBienvenida loader={loader}/>
-        <div onLoad={()=>funcionEvento()} id="/#inicio" className="contenedor-bienvenida ">
+        <div  id="/#inicio" className="contenedor-bienvenida ">
 
             <h2>
                 <p className="p-bienvenido">Bienvenido a</p>
