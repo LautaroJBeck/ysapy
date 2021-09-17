@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/ysapy/static/css/main.375dbabb.chunk.css",
-    "main.js": "/ysapy/static/js/main.49fc8d0b.chunk.js",
-    "main.js.map": "/ysapy/static/js/main.49fc8d0b.chunk.js.map",
+    "main.js": "/ysapy/static/js/main.a5a9dd1d.chunk.js",
+    "main.js.map": "/ysapy/static/js/main.a5a9dd1d.chunk.js.map",
     "runtime-main.js": "/ysapy/static/js/runtime-main.d310a67f.js",
     "runtime-main.js.map": "/ysapy/static/js/runtime-main.d310a67f.js.map",
-    "static/js/2.c9142760.chunk.js": "/ysapy/static/js/2.c9142760.chunk.js",
-    "static/js/2.c9142760.chunk.js.map": "/ysapy/static/js/2.c9142760.chunk.js.map",
+    "static/js/2.e36015f2.chunk.js": "/ysapy/static/js/2.e36015f2.chunk.js",
+    "static/js/2.e36015f2.chunk.js.map": "/ysapy/static/js/2.e36015f2.chunk.js.map",
     "static/js/3.b18a8b21.chunk.js": "/ysapy/static/js/3.b18a8b21.chunk.js",
     "static/js/3.b18a8b21.chunk.js.map": "/ysapy/static/js/3.b18a8b21.chunk.js.map",
     "index.html": "/ysapy/index.html",
     "static/css/main.375dbabb.chunk.css.map": "/ysapy/static/css/main.375dbabb.chunk.css.map",
-    "static/js/2.c9142760.chunk.js.LICENSE.txt": "/ysapy/static/js/2.c9142760.chunk.js.LICENSE.txt",
+    "static/js/2.e36015f2.chunk.js.LICENSE.txt": "/ysapy/static/js/2.e36015f2.chunk.js.LICENSE.txt",
     "static/media/Mozzarella.5bc0b553.JPG": "/ysapy/static/media/Mozzarella.5bc0b553.JPG",
     "static/media/Palmito.8e948e4d.jpg": "/ysapy/static/media/Palmito.8e948e4d.jpg",
     "static/media/Vegetariana.43a1f490.JPG": "/ysapy/static/media/Vegetariana.43a1f490.JPG",
@@ -25,8 +25,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.d310a67f.js",
-    "static/js/2.c9142760.chunk.js",
+    "static/js/2.e36015f2.chunk.js",
     "static/css/main.375dbabb.chunk.css",
-    "static/js/main.49fc8d0b.chunk.js"
+    "static/js/main.a5a9dd1d.chunk.js"
   ]
 }
