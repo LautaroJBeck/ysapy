@@ -31,7 +31,7 @@
 }
 .container-img-helado img{
     border-radius: .5rem;
-    height:80%;
+    height:150px;
     width:100%;
     object-fit: cover;
     box-shadow: 0px 0px 6px #212121;
