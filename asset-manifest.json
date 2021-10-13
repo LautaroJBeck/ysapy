@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/ysapy/static/css/main.4fad13c1.chunk.css",
-    "main.js": "/ysapy/static/js/main.a273e468.chunk.js",
-    "main.js.map": "/ysapy/static/js/main.a273e468.chunk.js.map",
+    "main.css": "/ysapy/static/css/main.aac76846.chunk.css",
+    "main.js": "/ysapy/static/js/main.ca7092b4.chunk.js",
+    "main.js.map": "/ysapy/static/js/main.ca7092b4.chunk.js.map",
     "runtime-main.js": "/ysapy/static/js/runtime-main.d310a67f.js",
     "runtime-main.js.map": "/ysapy/static/js/runtime-main.d310a67f.js.map",
     "static/js/2.e36015f2.chunk.js": "/ysapy/static/js/2.e36015f2.chunk.js",
@@ -10,23 +10,23 @@
     "static/js/3.b18a8b21.chunk.js": "/ysapy/static/js/3.b18a8b21.chunk.js",
     "static/js/3.b18a8b21.chunk.js.map": "/ysapy/static/js/3.b18a8b21.chunk.js.map",
     "index.html": "/ysapy/index.html",
-    "static/css/main.4fad13c1.chunk.css.map": "/ysapy/static/css/main.4fad13c1.chunk.css.map",
+    "static/css/main.aac76846.chunk.css.map": "/ysapy/static/css/main.aac76846.chunk.css.map",
     "static/js/2.e36015f2.chunk.js.LICENSE.txt": "/ysapy/static/js/2.e36015f2.chunk.js.LICENSE.txt",
     "static/media/Mozzarella.9027a72e.JPG": "/ysapy/static/media/Mozzarella.9027a72e.JPG",
     "static/media/Palmito.e591830a.jpg": "/ysapy/static/media/Palmito.e591830a.jpg",
     "static/media/Vegetariana.ade1fc99.JPG": "/ysapy/static/media/Vegetariana.ade1fc99.JPG",
     "static/media/empanada.0d79c414.jpg": "/ysapy/static/media/empanada.0d79c414.jpg",
     "static/media/ArticuloMenu.css": "/ysapy/static/media/fondoPizza.d2cc0c80.jpg",
-    "static/media/ArticuloBienvenida.css": "/ysapy/static/media/foto_bienvenida.2b19ae67.JPG",
-    "static/media/funcionarios.3f74ea29.jpg": "/ysapy/static/media/funcionarios.3f74ea29.jpg",
+    "static/media/funcionarios.07276936.jpg": "/ysapy/static/media/funcionarios.07276936.jpg",
     "static/media/logopng.a46b9d1d.png": "/ysapy/static/media/logopng.a46b9d1d.png",
     "static/media/verdaderoSvg.1241f86b.svg": "/ysapy/static/media/verdaderoSvg.1241f86b.svg",
+    "static/media/ArticuloBienvenida.css": "/ysapy/static/media/xd.dd86f809.jpg",
     "static/media/ysapy.b634c4c3.JPG": "/ysapy/static/media/ysapy.b634c4c3.JPG"
   },
   "entrypoints": [
     "static/js/runtime-main.d310a67f.js",
     "static/js/2.e36015f2.chunk.js",
-    "static/css/main.4fad13c1.chunk.css",
-    "static/js/main.a273e468.chunk.js"
+    "static/css/main.aac76846.chunk.css",
+    "static/js/main.ca7092b4.chunk.js"
   ]
 }
