@@ -20,7 +20,7 @@ const Header = () => {
             <img src={logo} alt="Ysapy logo png" />
         </div>
         <ul className="link-container">
-            <li><Link className="links-header" to="../#inicio">Inicio</Link></li>
+            <li><Link className="links-header" to="../#inicio">Ysapy</Link></li>
             <li><Link className="links-header" to="../#sobreNosotros">Sobre Nosotros</Link></li>
             <li><Link className="links-header" to="../#nuestrosProductos">Nuestros productos</Link></li>
             <li><Link className="links-header" to="../#contacto">Contacto</Link></li>
