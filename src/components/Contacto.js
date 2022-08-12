@@ -24,7 +24,7 @@ const Contacto = () => {
 
                         <div className="">
                             <span><i className="fab fa-facebook"></i></span>
-                            <a rel="noreferrer" target="_blank" href="/https://www.facebook.com/ysapyhrp">Facebook</a>
+                            <a rel="noreferrer" target="_blank" href="https://www.facebook.com/ysapyhrp">Facebook</a>
                         </div>
                         <div className="">
                             <span><i className="fab fa-instagram"></i></span>
